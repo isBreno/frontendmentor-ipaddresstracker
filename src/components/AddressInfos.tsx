@@ -5,35 +5,49 @@ export interface geoDataType {
   location: {
     region: string;
     timezone: string;
-  }
+  };
   isp: string;
 }
-const AddressInfos = ({ defaultIp }: { defaultIp: string}) => {
-
-
+const AddressInfos = ({ ClientIp, Ip }: { ClientIp?: string, Ip?: string | string[] }) => {
 	const [data] = getGeoData<geoDataType>(
-		`https://geo.ipify.org/api/v2/country?apiKey=at_jCLUGRmEJFx8DdwYQqAfTtqnsG4gA&ipAddress=${defaultIp}`
+		`https://geo.ipify.org/api/v2/country?apiKey=at_jCLUGRmEJFx8DdwYQqAfTtqnsG4gA&ipAddress=${
+			Ip || ClientIp
+		}`
 	)
-  
-
 
 	return (
-		<section className="mx-auto grid w-11/12 max-w-[1200px] rounded-2xl bg-white p-8 min-h-[200px] sm:grid-cols-4 -translate-y-24">
-			<div>
-				<h2>IP ADDRESS</h2>
-				<span>{data?.ip}</span>
+		<section className="mx-auto grid min-h-[200px] w-11/12 max-w-[1200px] -translate-y-24 rounded-2xl bg-white p-8 sm:grid-cols-4">
+			<div className=" flex flex-col gap-4 border-black border-opacity-25 sm:border-r">
+				<h2 className="text-sm font-bold tracking-widest text-[#969696] ">
+          IP ADDRESS
+				</h2>
+				<span className="break-words text-3xl font-bold text-[#2b2b2b]">
+					{data?.ip}
+				</span>
 			</div>
-			<div>
-				<h2>LOCATION</h2>
-				<span>{data?.location.region}</span>
+			<div className="flex flex-col gap-4 border-black border-opacity-25 px-8  sm:border-r">
+				<h2 className="text-sm font-bold tracking-widest text-[#969696] ">
+          LOCATION
+				</h2>
+				<span className="/ break-words text-3xl font-bold text-[#2b2b2b]">
+					{data?.location.region}
+				</span>
 			</div>
-			<div>
-				<h2>TIMEZONE</h2>
-				<span>{data?.location.timezone}</span>
+			<div className="flex flex-col gap-4 border-black border-opacity-25 px-8  sm:border-r">
+				<h2 className="text-sm font-bold tracking-widest text-[#969696] ">
+          TIMEZONE
+				</h2>
+				<span className="/ break-words text-3xl font-bold text-[#2b2b2b]">
+					{data?.location.timezone}
+				</span>
 			</div>
-			<div>
-				<h2>ISP</h2>
-				<span>{data?.isp}</span>
+			<div className="flex flex-col gap-4 px-8 ">
+				<h2 className="text-sm font-bold tracking-widest text-[#969696] ">
+          ISP
+				</h2>
+				<span className="/ break-words text-3xl font-bold text-[#2b2b2b]">
+					{data?.isp}
+				</span>
 			</div>
 		</section>
 	)

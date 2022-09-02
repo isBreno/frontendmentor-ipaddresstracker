@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>
-				<title>Nextjs Template</title>
+				<title>IP Adress Tracker</title>
 			</Head>
 			<GlobalContext>
 				<Component {...pageProps} />

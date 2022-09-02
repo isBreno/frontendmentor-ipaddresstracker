@@ -3,11 +3,10 @@ import Header from "@/components/Header"
 import type { NextPage } from "next"
 
 const Home: NextPage = (props: any) => {
-
 	return (
 		<>
 			<Header />
-			<AddressInfos defaultIp={props.ip}/>
+			<AddressInfos ClientIp={props.ip} />
 		</>
 	)
 }
