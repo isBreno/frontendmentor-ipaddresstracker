@@ -1,6 +1,6 @@
 import AddressInfos from "@/components/AddressInfos"
 import Header from "@/components/Header"
-import Map from "@/components/Map"
+import MapNoSSR from "@/components/MapIndex"
 import type { NextPage } from "next"
 
 const Home: NextPage = (props: any) => {
@@ -8,7 +8,7 @@ const Home: NextPage = (props: any) => {
 		<>
 			<Header />
 			<AddressInfos ClientIp={props.ip} />
-			<Map Ip={props.ip}/>
+			<MapNoSSR Ip={props.ip}/>
 		</>
 	)
 }

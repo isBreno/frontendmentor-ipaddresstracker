@@ -14,7 +14,7 @@ L.Icon.Default.mergeOptions({
 })
 
 interface MapProps {
-  Ip: number;
+  Ip?: string | string[];
 }
 
 interface geoDataBetterType extends geoDataType {
@@ -35,16 +35,17 @@ const Map = ({ Ip }: MapProps) => {
 	if (!data) return <div>a</div>
 
 	return (
-		<div className="-z-0 bg-red-500">
+		<div className="-z-0 -translate-y-10">
 			<MapContainer
+				minZoom={8}
 				center={[data.location.lat, data.location.lng]}
 				zoom={12}
 				scrollWheelZoom={true}
-				style={{ height: "70vh" }}
+				style={{ height: "70vh", zIndex: -1}}
 			>
 				<TileLayer
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-					zIndex={undefined}
+					
 				/>
 				<Marker position={[data.location.lat, data.location.lng]} />
 			</MapContainer>

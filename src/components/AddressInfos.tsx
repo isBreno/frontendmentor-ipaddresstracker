@@ -24,7 +24,7 @@ const AddressInfos = ({
 
 	return (
 		<>
-			<section className="absolute right-1/2 mx-auto grid min-h-[200px] w-11/12 max-w-[1200px] translate-x-1/2 -translate-y-24 rounded-2xl bg-white p-8 sm:grid-cols-4">
+			<section className="absolute z-50 translate-x-1/2 right-1/2  mx-auto grid min-h-[200px] w-11/12 max-w-[1200px] -translate-y-32 rounded-2xl bg-white p-8 sm:grid-cols-4">
 				<div className=" flex flex-col gap-4 border-black border-opacity-25 sm:border-r">
 					<h2 className="text-sm font-bold tracking-widest text-[#969696] ">
             IP ADDRESS
