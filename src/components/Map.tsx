@@ -41,7 +41,7 @@ const Map = ({ Ip }: MapProps) => {
 				center={[data.location.lat, data.location.lng]}
 				zoom={12}
 				scrollWheelZoom={true}
-				style={{ height: "69vh", zIndex: -1}}
+				style={{ height: "68vh", zIndex: -1}}
 			>
 				<TileLayer
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
