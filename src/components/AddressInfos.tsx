@@ -14,7 +14,7 @@ const AddressInfos = ({ ClientIp, Ip }: { ClientIp?: string, Ip?: string | strin
 			Ip || ClientIp
 		}`
 	)
-
+	// TODO: MOBILE BEST VIEW
 	return (
 		<section className="mx-auto grid min-h-[200px] w-11/12 max-w-[1200px] -translate-y-24 rounded-2xl bg-white p-8 sm:grid-cols-4">
 			<div className=" flex flex-col gap-4 border-black border-opacity-25 sm:border-r">
@@ -25,27 +25,27 @@ const AddressInfos = ({ ClientIp, Ip }: { ClientIp?: string, Ip?: string | strin
 					{data?.ip}
 				</span>
 			</div>
-			<div className="flex flex-col gap-4 border-black border-opacity-25 px-8  sm:border-r">
+			<div className="flex flex-col gap-4 border-black border-opacity-25 sm:px-8  sm:border-r">
 				<h2 className="text-sm font-bold tracking-widest text-[#969696] ">
           LOCATION
 				</h2>
-				<span className="/ break-words text-3xl font-bold text-[#2b2b2b]">
+				<span className="break-words text-3xl font-bold text-[#2b2b2b]">
 					{data?.location.region}
 				</span>
 			</div>
-			<div className="flex flex-col gap-4 border-black border-opacity-25 px-8  sm:border-r">
+			<div className="flex flex-col gap-4 border-black border-opacity-25 sm:px-8  sm:border-r">
 				<h2 className="text-sm font-bold tracking-widest text-[#969696] ">
           TIMEZONE
 				</h2>
-				<span className="/ break-words text-3xl font-bold text-[#2b2b2b]">
+				<span className="break-words text-3xl font-bold text-[#2b2b2b]">
 					{data?.location.timezone}
 				</span>
 			</div>
-			<div className="flex flex-col gap-4 px-8 ">
+			<div className="flex flex-col gap-4 sm:px-8 ">
 				<h2 className="text-sm font-bold tracking-widest text-[#969696] ">
           ISP
 				</h2>
-				<span className="/ break-words text-3xl font-bold text-[#2b2b2b]">
+				<span className="break-words text-3xl font-bold text-[#2b2b2b]">
 					{data?.isp}
 				</span>
 			</div>
