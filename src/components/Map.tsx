@@ -32,16 +32,16 @@ const Map = ({ Ip }: MapProps) => {
 	)
 
 	if (isLoading) return <div>Loading</div>
-	if (!data) return <div>a</div>
+	if (!data) return 
 
 	return (
-		<div className="-z-0 -translate-y-10">
+		<div className="-z-0 -translate-y-10 max-h-[50vh]">
 			<MapContainer
 				minZoom={8}
 				center={[data.location.lat, data.location.lng]}
 				zoom={12}
 				scrollWheelZoom={true}
-				style={{ height: "70vh", zIndex: -1}}
+				style={{ height: "69vh", zIndex: -1}}
 			>
 				<TileLayer
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
