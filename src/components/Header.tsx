@@ -2,6 +2,7 @@
 import { ArrowRight } from "phosphor-react"
 import { FormEvent, useState } from "react"
 import {  useRouter } from "next/router"
+import Image from "next/image"
 
 // Imports
 
@@ -32,7 +33,7 @@ const Header = () => {
 						onChange={e => setAdress(e.currentTarget.value)}
 					/>
 					<button className="flex min-w-[75px] items-center justify-center rounded-tr-3xl rounded-br-3xl bg-black">
-						<ArrowRight size={24} />
+						<Image src="/icon-arrow.svg" alt="" width={14} height={14} />
 					</button>
 				</form>
 			</div>
