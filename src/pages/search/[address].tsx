@@ -8,7 +8,6 @@ const AddressInfos = () => {
 	const { address } = route.query
 
 	if (!address) return 
-	console.log(address)
 
 	return (
 		<>

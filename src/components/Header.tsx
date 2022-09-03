@@ -1,5 +1,4 @@
 // Imports
-import { ArrowRight } from "phosphor-react"
 import { FormEvent, useState } from "react"
 import {  useRouter } from "next/router"
 import Image from "next/image"
